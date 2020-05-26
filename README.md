@@ -4,7 +4,7 @@ This is a map web app that provides driving directions between 2 locations and p
 
 ## Getting Started
 
-- Download the application and run it in any web browser apart from Internet Explorer.
+- Download the application and run the index.html file in any web browser apart from Internet Explorer.
 - To use the directions widget, create an ArcGIS for Developers account and generate an endpoint using the service proxy.
 - Go to the javaScript file and replace the routeServiceUrl with the generated endpoint.
 
