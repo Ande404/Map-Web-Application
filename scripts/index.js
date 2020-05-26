@@ -3,10 +3,11 @@ require([
     "esri/views/MapView",
     "esri/widgets/DistanceMeasurement2D",
     "esri/widgets/AreaMeasurement2D",
+    "esri/widgets/Expand",
     "esri/widgets/Directions",
     "esri/symbols/SimpleMarkerSymbol",
     "esri/widgets/Compass"
-], function (Map, MapView, DistanceMeasurement2D, AreaMeasurement2D, Directions, SimpleMarkerSymbol, Compass) {
+], function (Map, MapView, DistanceMeasurement2D, AreaMeasurement2D, Expand, Directions, SimpleMarkerSymbol, Compass) {
 
     var activeWidget = null;
 
@@ -105,8 +106,33 @@ require([
         //"https://utility.arcgis.com/usrsvcs/appservices/srsKxBIxJZB0pTZ0/rest/services/World/Route/NAServer/Route_World"
     });
 
+    //Expand and collapse functionality
+    var bgExpand = new Expand({
+        view: view,
+        content: directionsWidget
+    });
+
+    //Collapse the directions widget when in mobile view   
+    view.watch("widthBreakpoint", function () {
+
+        bgExpand.expand();
+        console.log("i am activated");
+
+        var mobileSize =
+            view.heightBreakpoint === "xsmall" ||
+            view.widthBreakpoint === "xsmall";
+
+        if (mobileSize) {
+            bgExpand.collapse();
+        }
+        else {
+            bgExpand.expand();
+        }
+
+    });
+    
     // Add the Directions widget to the top right corner of the view
-    view.ui.add(directionsWidget, {
+    view.ui.add(bgExpand, {
         position: "top-right"
     });
 
