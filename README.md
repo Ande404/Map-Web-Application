@@ -12,6 +12,9 @@ This is a map web app that provides driving directions between 2 locations and p
 
 ![Directions](/images/directions.png)
 
+It is important to note that the "best route can be the quickest route for a given time of day considering the traffic conditions applicable during that time, or it can be the shortest route that minimizes the travel distance." Therefore sometimes the routing service gives a route that is longer than expected. Click [Route Service](https://developers.arcgis.com/rest/network/api-reference/route-synchronous-service.htm) to learn more about how the service works.
+
+
 ## Area Widget Example
 
 ![Area](/images/Area.png)
