@@ -101,8 +101,8 @@ require([
         // Point the URL to a valid route service that uses an
         // ArcGIS Online hosted service proxy instead of the default service
         routeServiceUrl:
-            "https://utility.arcgis.com/usrsvcs/appservices/6xHeUoKAuQPhjNP8/rest/services/World/Route/NAServer/Route_World"
-        //"https://utility.arcgis.com/usrsvcs/appservices/srsKxBIxJZB0pTZ0/rest/services/World/Route/NAServer/Route_World"
+        //replace the url below with the personal endpoint from ArcGIS for developers
+        "https://utility.arcgis.com/usrsvcs/appservices/srsKxBIxJZB0pTZ0/rest/services/World/Route/NAServer/Route_World"
     });
 
     // Add the Directions widget to the top right corner of the view
