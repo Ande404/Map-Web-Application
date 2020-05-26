@@ -4,7 +4,7 @@ This is a map web app that provides driving directions between 2 locations and p
 
 ## Getting Started
 
-- Download the application and run it any web browser apart from Internet Explorer.
+- Download the application and run it in any web browser apart from Internet Explorer.
 - To use the directions widget, create an ArcGIS for Developers account and generate an endpoint using the service proxy.
 - Go to the javaScript file and replace the routeServiceUrl with the generated endpoint.
 
@@ -26,6 +26,7 @@ To change the base map, go to the JS file and replace the basemap values with an
 * "gray-vector"
 * "streets-night-vector"
 * "streets-navigation-vector"
+
 To see more base map layers read [ArcGIS web maps](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html)
 
 ## Built With
@@ -38,5 +39,5 @@ To see more base map layers read [ArcGIS web maps](https://developers.arcgis.com
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE.md](LICENSE) file for details
 
