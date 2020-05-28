@@ -23,8 +23,7 @@ body,
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
-.action-button:hover,
-.action-button:focus {
+.action-button:hover, .action-button:focus {
     background: #0079c1;
     color: #e4e4e4;
 }
