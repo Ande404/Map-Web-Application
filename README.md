@@ -32,6 +32,10 @@ To change the base map, go to the JS file and replace the basemap values with an
 
 To see more base map layers read [ArcGIS web maps](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html)
 
+## Contributions
+
+Anyone and everyone is welcome to contribute. I accept all pull requests :)
+
 ## Built With
 
 * [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) - The web framework used
