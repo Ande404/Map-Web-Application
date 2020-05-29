@@ -112,24 +112,23 @@ require([
         content: directionsWidget
     });
 
-    //Collapse the directions widget when in mobile view   
-    view.watch("widthBreakpoint", function () {
+   //Collapse the directions widget when in mobile view
+  checkForMobileView = () => {
+    var mobileSize =
+      view.heightBreakpoint === "xsmall" || view.widthBreakpoint === "xsmall";
 
-        bgExpand.expand();
-        console.log("i am activated");
+    if (mobileSize) {
+      bgExpand.collapse();
+    } else {
+      bgExpand.expand();
+    }
+  };
 
-        var mobileSize =
-            view.heightBreakpoint === "xsmall" ||
-            view.widthBreakpoint === "xsmall";
+  checkForMobileView();
 
-        if (mobileSize) {
-            bgExpand.collapse();
-        }
-        else {
-            bgExpand.expand();
-        }
-
-    });
+  view.watch("widthBreakpoint", function () {
+    checkForMobileView();
+  });
     
     // Add the Directions widget to the top right corner of the view
     view.ui.add(bgExpand, {
